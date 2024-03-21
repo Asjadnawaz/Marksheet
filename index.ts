@@ -12,19 +12,24 @@ let answer = await inquirer.prompt([
     type: "number",
     name: "SecondSubject",
   },
+  {
+    message: "Enter Computer Marks",
+    type: "number",
+    name: "ThirdSubject",
+  },
 ]);
 
 
 
 
-console.log("Total Marks:", 200);
-console.log("Obtained Marks:", answer.FirstSubject + answer.SecondSubject);
+console.log("Total Marks:", 300);
+console.log("Obtained Marks:", answer.FirstSubject + answer.SecondSubject + answer.ThirdSubject);
 console.log(
   "Percentage:",
-  (answer.FirstSubject + answer.SecondSubject) / 200 * 100
+  (answer.FirstSubject + answer.SecondSubject + answer.ThirdSubject) / 200 * 100
 );
 
-var Grade = (answer.FirstSubject + answer.SecondSubject) / 200 * 100;
+var Grade = (answer.FirstSubject + answer.SecondSubject + answer.ThirdSubject) / 200 * 100;
  
 
 
