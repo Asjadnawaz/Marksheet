@@ -1,7 +1,7 @@
 {
   "name": "simplemarksheet",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "Bugs fixed",
   "main": "index.js",
   "type": "module",
   "bin": "index.js",
