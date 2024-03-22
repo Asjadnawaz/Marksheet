@@ -1,6 +1,8 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 
+console.log("---------Marksheet----------");
+
 let answer = await inquirer.prompt([
   {
     message: "Enter Mathematics Marks",
@@ -19,19 +21,22 @@ let answer = await inquirer.prompt([
   },
 ]);
 
+// -------------------Calculations-----------------------------
 
+// -----------------Declarations-----------------------------
+console.log("-----------------------------");
 
+var subjects: number =
+  answer.FirstSubject + answer.SecondSubject + answer.ThirdSubject;
+var totalmarks: number = 300;
 
-console.log("Total Marks:", 300);
-console.log("Obtained Marks:", answer.FirstSubject + answer.SecondSubject + answer.ThirdSubject);
-console.log(
-  "Percentage:",
-  (answer.FirstSubject + answer.SecondSubject + answer.ThirdSubject) / 200 * 100
-);
+// --------------------------------------------------------------
 
-var Grade = (answer.FirstSubject + answer.SecondSubject + answer.ThirdSubject) / 200 * 100;
- 
+console.log("Total Marks:", totalmarks);
+console.log("Obtained Marks:", subjects);
+console.log("Percentage:", (subjects / totalmarks) * 100);
 
+var Grade = (subjects / totalmarks) * 100;
 
 //-------------Grades------------------
 
@@ -48,3 +53,20 @@ if (Grade >= 80) {
 } else {
   console.log("Grade:" + " " + chalk.yellow("Fail"));
 }
+
+//-------------Remarks--------------------
+
+if (Grade >= 80) {
+  console.log("Remarks:" + " " + chalk.yellow("Kia baat hai chah gaya tu to"));
+} else if (Grade >= 70) {
+  console.log("Remarks:" + " " + chalk.yellow("bhot badiya kia baat hai"));
+} else if (Grade >= 60) {
+  console.log("Remarks:" + " " + chalk.yellow("munasib sa hai bas"));
+} else if (Grade >= 50) {
+  console.log("Remarks:" + " " + chalk.yellow("sahi hai bas"));
+} else if (Grade >= 40) {
+  console.log("Remarks:" + " " + chalk.yellow("kia karaha hai kuch parhliya kar kabhi"));
+} else {
+  console.log("Remarks:" + " " + chalk.yellow("nikal pheli forsat main nikal"));
+}
+
