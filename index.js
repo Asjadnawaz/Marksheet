@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
 console.log("---------Marksheet----------");
@@ -55,10 +56,10 @@ else if (Grade >= 70) {
     console.log("Remarks:" + " " + chalk.yellow("bhot badiya kia baat hai"));
 }
 else if (Grade >= 60) {
-    console.log("Remarks::" + " " + chalk.yellow("munasib sa hai bas"));
+    console.log("Remarks:" + " " + chalk.yellow("munasib sa hai bas"));
 }
 else if (Grade >= 50) {
-    console.log("Remarks::" + " " + chalk.yellow("sahi hai bas"));
+    console.log("Remarks:" + " " + chalk.yellow("sahi hai bas"));
 }
 else if (Grade >= 40) {
     console.log("Remarks:" + " " + chalk.yellow("kia karaha hai kuch parhliya kar kabhi"));
