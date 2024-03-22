@@ -3,7 +3,7 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 
-console.log("---------Marksheet----------");
+console.log("---------1st Year Marksheet----------");
 
 let answer = await inquirer.prompt([
   {
@@ -12,14 +12,29 @@ let answer = await inquirer.prompt([
     name: "FirstSubject",
   },
   {
-    message: "Enter Physics Marks",
+    message: "Enter Physics Marks (With Practical)",
     type: "number",
     name: "SecondSubject",
   },
   {
-    message: "Enter Computer Marks",
+    message: "Enter Computer Marks (With Practical)",
     type: "number",
     name: "ThirdSubject",
+  },
+  {
+    message: "Enter English Marks",
+    type: "number",
+    name: "ForthSubject",
+  },
+  {
+    message: "Enter Urdu Marks",
+    type: "number",
+    name: "FifthSubject",
+  },
+  {
+    message: "Enter Islamiat Marks",
+    type: "number",
+    name: "SixthSubject",
   },
 ]);
 
@@ -29,8 +44,8 @@ let answer = await inquirer.prompt([
 console.log("-----------------------------");
 
 var subjects: number =
-  answer.FirstSubject + answer.SecondSubject + answer.ThirdSubject;
-var totalmarks: number = 300;
+  answer.FirstSubject + answer.SecondSubject + answer.ThirdSubject + answer.ForthSubject + answer.FifthSubject + answer.SixthSubject;
+var totalmarks: number = 1100;
 
 // --------------------------------------------------------------
 

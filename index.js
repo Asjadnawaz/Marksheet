@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
-console.log("---------Marksheet----------");
+console.log("---------1st Year Marksheet----------");
 let answer = await inquirer.prompt([
     {
         message: "Enter Mathematics Marks",
@@ -9,21 +9,36 @@ let answer = await inquirer.prompt([
         name: "FirstSubject",
     },
     {
-        message: "Enter Physics Marks",
+        message: "Enter Physics Marks (With Practical)",
         type: "number",
         name: "SecondSubject",
     },
     {
-        message: "Enter Computer Marks",
+        message: "Enter Computer Marks (With Practical)",
         type: "number",
         name: "ThirdSubject",
+    },
+    {
+        message: "Enter English Marks",
+        type: "number",
+        name: "ForthSubject",
+    },
+    {
+        message: "Enter Urdu Marks",
+        type: "number",
+        name: "FifthSubject",
+    },
+    {
+        message: "Enter Islamiat Marks",
+        type: "number",
+        name: "SixthSubject",
     },
 ]);
 // -------------------Calculations-----------------------------
 // -----------------Declarations-----------------------------
 console.log("-----------------------------");
-var subjects = answer.FirstSubject + answer.SecondSubject + answer.ThirdSubject;
-var totalmarks = 300;
+var subjects = answer.FirstSubject + answer.SecondSubject + answer.ThirdSubject + answer.ForthSubject + answer.FifthSubject + answer.SixthSubject;
+var totalmarks = 1100;
 // --------------------------------------------------------------
 console.log("Total Marks:", totalmarks);
 console.log("Obtained Marks:", subjects);
